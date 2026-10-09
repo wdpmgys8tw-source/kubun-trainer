@@ -1,7 +1,46 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#2588e8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon.svg"><title>区分トレーナー</title>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#08162e"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon.svg"><title>区分トレーナー</title>
 <style>
 :root{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:#173759;background:#f1f8ff}*{box-sizing:border-box}body{margin:0;min-height:100dvh;background:linear-gradient(165deg,#e5f5ff,#f7fbff 60%)}button,input,textarea{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}button:active{transform:scale(.98)}.app{max-width:600px;margin:auto;min-height:100dvh;padding:calc(env(safe-area-inset-top) + 18px) 20px calc(env(safe-area-inset-bottom) + 24px);display:flex;flex-direction:column}.top{display:flex;align-items:center;min-height:46px;gap:12px}.back{background:none;border:0;color:#2273b6;font-weight:700;padding:10px 0}.top h2{font-size:22px;margin:0}.content{flex:1;display:flex;flex-direction:column;gap:16px}.home{justify-content:center;text-align:center}.home .symbol{font-size:60px}.home h1{font-size:38px;color:#147ad4;margin:0}.subtitle{color:#6484a1;margin:0 0 24px}.btn{border:0;border-radius:18px;padding:17px 18px;font-size:19px;font-weight:800;min-height:60px;box-shadow:0 4px 0 #0000000c}.primary{background:#2588e8;color:white}.secondary{background:#fff;color:#2375bf;border:2px solid #b8ddfa}.danger{background:#fff;color:#d43d4d;border:2px solid #ffd0d5}.item{width:100%;text-align:left;background:white;border:2px solid #d7eafa;color:#245578;border-radius:17px;padding:18px;font-size:19px;font-weight:750}.item:after{content:"›";float:right;color:#74a9d2}.muted{color:#6b88a2;font-size:14px}.label{font-size:16px;font-weight:800;margin-bottom:8px}.field{width:100%;padding:15px;border-radius:14px;border:2px solid #d0e6f7;background:#fff;color:#173759;font-size:18px;outline:none}.field:focus{border-color:#2588e8}textarea.field{min-height:210px;resize:vertical;line-height:1.6}.panel{background:#fff;border-radius:20px;padding:18px;box-shadow:0 8px 28px #4a99cf13}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choices.four{grid-template-columns:repeat(2,minmax(0,1fr))}.choice{border:2px solid #cce5f9;border-radius:14px;padding:14px 4px;background:#fff;color:#3474a7;font-weight:800}.choice.selected{background:#2588e8;border-color:#2588e8;color:#fff}.spacer{flex:1}.ready{align-items:center;justify-content:center}.start{width:min(66vw,280px);height:min(66vw,280px);border-radius:50%;border:10px solid #b9e4ff;background:#2588e8;color:white;font-size:42px;font-weight:900;box-shadow:0 12px 30px #2687d34a}.center{align-items:center;justify-content:center;text-align:center}.count{font-size:clamp(130px,45vw,230px);font-weight:900;color:#2387e9}.practice{position:relative;user-select:none;touch-action:manipulation}.practiceHead{display:flex;justify-content:space-between;align-items:center;font-weight:800;color:#5988b1;min-height:55px}.end{border:0;background:#fff;border-radius:12px;color:#bd5261;padding:12px 18px;font-weight:800}.destination{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:15px 0;line-height:1.18;font-weight:900;color:#123e67}.destination .destInner{width:100%;overflow-wrap:anywhere}.destination .destLine{display:block;white-space:nowrap;overflow-wrap:normal;word-break:keep-all}.finish{font-size:50px;color:#2588e8;font-weight:900}.time{font-size:52px;font-weight:900;font-variant-numeric:tabular-nums}.dialogShade{position:fixed;inset:0;background:#183f65a8;display:flex;align-items:center;justify-content:center;padding:24px;z-index:10}.dialog{width:min(100%,380px);background:white;border-radius:24px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;text-align:center}.dialog h3{margin:0 0 12px;font-size:21px}.error{color:#c33948;font-weight:700;font-size:14px}.stack{display:flex;flex-direction:column;gap:12px}.footerNote{text-align:center;font-size:12px;color:#87a2ba;margin-top:16px}@media(prefers-reduced-motion:no-preference){.start{animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{50%{box-shadow:0 12px 42px #2687d36b}}}
+
+/* G1 rhythm-game visual skin — presentation only */
+:root{color:#eef7ff;background:#061126;color-scheme:dark}
+body{background:radial-gradient(ellipse at 85% 0%,#143b70 0%,transparent 42%),radial-gradient(ellipse at 0% 85%,#261453 0%,transparent 44%),linear-gradient(165deg,#08162e,#050c1c 78%);color:#eef7ff}
+.app{position:relative}
+.app:before{content:"";pointer-events:none;position:fixed;inset:0;background:repeating-linear-gradient(135deg,transparent 0 96px,#3d8eff09 97px 98px,transparent 99px 170px);z-index:-1}
+.top{border-bottom:1px solid #2c4d79;padding-bottom:12px;margin-bottom:20px}
+.top h2{font-size:21px;letter-spacing:.04em;color:#f2f8ff}
+.back{color:#71dcff}
+.home .symbol{font-size:55px;filter:drop-shadow(0 0 18px #17d5ff66)}
+.home h1{font-size:clamp(30px,8vw,38px);color:#f5fbff;letter-spacing:.035em;text-shadow:0 0 24px #29baff66}
+.subtitle{color:#95b5d6;letter-spacing:.04em}
+.btn{position:relative;border-radius:16px;min-height:66px;letter-spacing:.035em;transition:filter .15s,transform .12s;box-shadow:0 8px 26px #0007}
+.btn:active{transform:scale(.98)}
+.primary{background:linear-gradient(112deg,#0679cd,#04c4e9 72%,#2d87ff);color:#fff;border:1px solid #65e8ff;box-shadow:0 0 0 1px #2ccfff33,0 8px 25px #00aeff38,inset 0 1px 0 #ffffff65}
+.secondary{background:linear-gradient(115deg,#151c46,#35246e 85%);color:#f4edff;border:1px solid #b27aff;box-shadow:0 8px 24px #050a22,0 0 18px #884dff2b}
+.danger{background:#26162b;color:#ff9db2;border:1px solid #a14b73;box-shadow:none}
+.item{background:linear-gradient(110deg,#102746,#101d38);border:1px solid #315c87;color:#f3f9ff;box-shadow:inset 3px 0 0 #00c9ed,0 6px 18px #0004;border-radius:15px}
+.item:after{color:#3be4ff}
+.muted{color:#a4bed6}
+.label{color:#c3eaff;letter-spacing:.035em}
+.field{background:#0c1c35;border:1px solid #355b85;color:#f5fbff;border-radius:13px}
+.field:focus{border-color:#2de0ff;box-shadow:0 0 0 3px #18cbff22}
+.field::placeholder{color:#7c9ab6}
+.panel{background:linear-gradient(155deg,#102747,#0c1830);border:1px solid #315277;box-shadow:0 10px 30px #0005}
+.choice{background:#101f3b;border:1px solid #345a82;color:#b7d9f5;border-radius:12px;min-height:55px}
+.choice.selected{background:linear-gradient(125deg,#0879c7,#00bfe0);border-color:#6cf3ff;color:white;box-shadow:0 0 18px #00cfff40}
+.start{border:7px solid #5be8ff;background:radial-gradient(circle at 30% 20%,#1acde9,#0962c1 75%);color:white;box-shadow:0 0 0 10px #19b6ff15,0 0 42px #00d7ff65;font-size:42px}
+.count{color:#e6faff;text-shadow:0 0 35px #00caffaa}
+.practiceHead{color:#9cc6e8;border-bottom:1px solid #234464}
+.end{background:#17253e;border:1px solid #42587a;color:#ffafbf;border-radius:11px}
+.destination{color:#fff; text-shadow:0 0 22px #4b9aff24}
+.finish{color:#4de6ff;text-shadow:0 0 25px #00d5ff6b}
+.time{color:#f5faff}
+.dialogShade{background:#010817c9;backdrop-filter:blur(5px)}
+.dialog{background:#11213b;border:1px solid #4b6d95;box-shadow:0 20px 65px #000a}
+.error{color:#ff9ba9}
+.footerNote{color:#819bb6}
+@media(prefers-reduced-motion:no-preference){.start{animation:pulseG1 2.4s ease-in-out infinite}@keyframes pulseG1{50%{box-shadow:0 0 0 10px #19b6ff15,0 0 65px #00d7ff9c}}}
 </style></head><body><main id="app" class="app"></main><script>
 (()=>{'use strict';
 const STORAGE='kubun-trainer-sets-v1';let sets=load(),page='home',selected=null,mode='manual',count=50,interval=1000,sequence=[],index=0,startedAt=0,pausedMs=0,pauseAt=0,elapsed=0,runTimer=null,dialog=null,editId=null;
