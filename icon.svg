@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="112" fill="#2487e8"/><rect x="82" y="154" width="348" height="230" rx="28" fill="#fff"/><path d="M82 179l174 128 174-128" fill="none" stroke="#2487e8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/><circle cx="382" cy="133" r="66" fill="#ffcc55"/><text x="382" y="157" text-anchor="middle" font-family="sans-serif" font-size="72" font-weight="bold" fill="#185d9a">3</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#143965"/><stop offset=".55" stop-color="#08162e"/><stop offset="1" stop-color="#160e38"/></linearGradient>
+<linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#72f3ff"/><stop offset=".55" stop-color="#08c9ed"/><stop offset="1" stop-color="#438bff"/></linearGradient>
+<filter id="halo" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="512" height="512" rx="110" fill="url(#bg)"/>
+<rect x="24" y="24" width="464" height="464" rx="92" fill="none" stroke="#3375b7" stroke-width="3" opacity=".65"/>
+<path d="M102 352L410 144" stroke="#0f83ca" stroke-width="3" opacity=".2"/>
+<rect x="103" y="158" width="306" height="204" rx="28" fill="#06d8ff" opacity=".28" filter="url(#halo)"/>
+<rect x="98" y="151" width="316" height="210" rx="27" fill="#0b2548" stroke="url(#glow)" stroke-width="13"/>
+<path d="M115 176L256 281L397 176" fill="none" stroke="url(#glow)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114 341L211 258M398 341L301 258" fill="none" stroke="#377ee6" stroke-width="9" stroke-linecap="round" opacity=".7"/>
+<path d="M160 117H352" stroke="#70edff" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+<path d="M183 398H329" stroke="#856cff" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+</svg>
